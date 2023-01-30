@@ -2,7 +2,7 @@ import { AccountBox, Article, ExpandMore, Group, Home, ModeNight, Person, Settin
 import { Avatar, Box, Card, CardActions, CardContent, CardHeader, CardMedia, Collapse, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch, Typography } from '@mui/material'
 import React from 'react'
 
-const Sidebar = () => {
+const Sidebar = ({mode, setMode}) => {
   return (
     <Box  flex={1} p={2} sx={{display: {
       xs: "none", sm: "block"
@@ -70,8 +70,8 @@ const Sidebar = () => {
               <ListItemIcon>
                 <ModeNight />
               </ListItemIcon>
-              {/* <Switch onChange={e=>setMode(mode === "light" ? "dark" : "light")}/> */}
-              <Switch/>
+              <Switch onChange={e=>setMode(mode === "light" ? "dark" : "light")}/>
+             
             </ListItemButton>
           </ListItem>
         </List>
